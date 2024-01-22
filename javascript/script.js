@@ -25,3 +25,7 @@
 // console.log(sessionStorage.length);
 // console.log(sessionStorage.key(0));
 // sessionStorage.removeItem("name")
+// document.cookie = "name=sardar";
+// document.cookie = "age=23";
+// document.cookie = `name=${encodeURIComponent("sardar balnour")}`
+// document.cookie = "lastName=balnour; path=/; max-age=20";
