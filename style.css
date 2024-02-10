@@ -1,4 +1,10 @@
 *{
-    padding: 0px;
-    margin: 0px;
+    padding: auto;
+    margin: auto;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
