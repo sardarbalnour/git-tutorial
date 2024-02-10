@@ -1,2 +1,5 @@
 // module in js
-console.log("first");
+const name = "sardar";
+let age = 23;
+const show = ()=> console.log("hello world");
+export{name, age, show as introduce}
