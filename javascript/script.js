@@ -3,8 +3,10 @@
 const promise = new Promise((resolve, reject) => {
   setTimeout(() => {
     console.log("1");
-    resolve();
+    // resolve();
+    reject()
   }, 1000);
 });
 
-promise.then(() => console.log("2"));
+// promise.then(() => console.log("2"));
+promise.catch(() => console.log("2"));
