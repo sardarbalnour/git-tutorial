@@ -1,12 +1,18 @@
 // Javascript is a single-threaded language
 // promise
-const promise = new Promise((resolve, reject) => {
+const random = new Promise((resolve, reject) => {
+  console.log("start");
   setTimeout(() => {
-    console.log("1");
-    // resolve();
-    reject()
+    const randomNumber = Math.random();
+    if (randomNumber > 0.5) {
+      console.log("success :", randomNumber);
+      resolve();
+    } else {
+      console.log("reject :", randomNumber);
+      reject();
+    }
   }, 1000);
 });
 
-// promise.then(() => console.log("2"));
-promise.catch(() => console.log("2"));
+random.then(() => {console.log("success end.")});
+random.catch(() => {console.log("reject end.")});
