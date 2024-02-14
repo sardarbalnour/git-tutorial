@@ -23,6 +23,15 @@ const add = (number) => {
   return promise;
 };
 
-dublicate(5)
-  .then((number) => add(number))
-  .then((result) => console.log(result));
+// dublicate(5)
+//   .then((number) => add(number))
+//   .then((result) => console.log(result));
+
+async function start() {
+  const number = await dublicate(5);
+  const result = await add(number);
+  console.log(result);
+  console.log("end");
+}
+
+start();
