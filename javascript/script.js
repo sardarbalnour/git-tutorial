@@ -1,5 +1,6 @@
 // Javascript is a single-threaded language
 // promise
+// s23
 const dublicate = (number) => {
   const promise = new Promise((resolve, reject) => {
     console.log("start");
