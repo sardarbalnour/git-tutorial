@@ -2,8 +2,8 @@
 // promise
 // s23
 const dublicate = (number) => {
+  console.log("start");
   const promise = new Promise((resolve, reject) => {
-    console.log("start");
     setTimeout(() => {
       const result = number * 10;
       resolve(result);
@@ -27,11 +27,18 @@ const add = (number) => {
 //   .then((number) => add(number))
 //   .then((result) => console.log(result));
 
-async function start() {
+// async function start() {
+//   const number = await dublicate(5);
+//   const result = await add(number);
+//   console.log(result);
+//   console.log("end");
+// }
+
+const start = async () => {
   const number = await dublicate(5);
   const result = await add(number);
   console.log(result);
   console.log("end");
-}
+};
 
 start();
