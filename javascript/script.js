@@ -2,3 +2,4 @@
 // HTTP Requests
 // what is API
 // what is AJAX
+// what is JSON
