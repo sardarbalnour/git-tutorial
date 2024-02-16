@@ -15,6 +15,14 @@
 // xhr.send();
 
 // fetch
-fetch("https://jsonplaceholder.typicode.com/posts")
-  .then((res) => res.json())
-  .then((data) => console.log(data));
+// fetch("https://jsonplaceholder.typicode.com/posts")
+//   .then((res) => res.json())
+//   .then((data) => console.log(data))
+//   .catch((err) => console.log(err));
+
+async function getData() {
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const data = await res.json();
+  console.log(data);
+}
+getData();
