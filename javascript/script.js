@@ -60,13 +60,26 @@
 //   .then((data) => console.log(data));
 
 // PUT
+// fetch("https://jsonplaceholder.typicode.com/posts/1", {
+//   method: "PUT",
+//   body: JSON.stringify({
+//     id: 1,
+//     title: "shteki tazam nosiva",
+//     body: "awash ba dli xom kolan dagorm va update dkmawa",
+//     userId: 1,
+//   }),
+//   headers: {
+//     "Content-type": "application/json; charset=UTF-8",
+//   },
+// })
+//   .then((response) => response.json())
+//   .then((json) => console.log(json));
+
+// PATCH
 fetch("https://jsonplaceholder.typicode.com/posts/1", {
-  method: "PUT",
+  method: "PATCH",
   body: JSON.stringify({
-    id: 1,
-    title: "shteki tazam nosiva",
-    body: "awash ba dli xom kolan dagorm va update dkmawa",
-    userId: 1,
+    title: "faqat aw title awaz dkm karm bawani dika ne",
   }),
   headers: {
     "Content-type": "application/json; charset=UTF-8",
