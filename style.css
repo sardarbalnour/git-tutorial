@@ -3,8 +3,19 @@
     margin: auto;
 }
 
+body {
+    background-color: #404041;
+}
+
 h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 200px;
+    font-size: 6rem;
+    background: -webkit-linear-gradient(
+        #d3cae2,#e6c17a
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
