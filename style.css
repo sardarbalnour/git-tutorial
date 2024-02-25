@@ -13,10 +13,10 @@ h1{
     align-items: center;
     margin: 70px 0;
     font-size: 5rem;
-    background: -webkit-linear-gradient(
+    background: linear-gradient(
         #d3cae2,#e6c17a
     );
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
