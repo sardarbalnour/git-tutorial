@@ -66,6 +66,8 @@ class Quiz {
   }
 
   // prototype
+
+  // instance method
   showQuestion() {
     console.log(this.question);
   }
@@ -73,7 +75,14 @@ class Quiz {
   checkAnswer() {
     console.log("The answer is : ", this.answers[this.correctAnswer]);
   }
- }
+
+  static printSomething() {
+    console.log("im a static method");
+  }
+}
 
 const quiz1 = new Quiz("question text1", [1, 2, 3, 4], 0);
 console.log(quiz1);
+quiz1.checkAnswer();
+
+Quiz.printSomething();
