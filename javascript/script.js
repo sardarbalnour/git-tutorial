@@ -50,24 +50,52 @@
 // classes
 // classes are a template for creating objects
 
+// class Quiz {
+//   constructor(question, answers, correctAnswer) {
+//     this.question = question;
+//     this.answers = answers;
+//     this.correctAnswer = correctAnswer;
+//     // this.showQuestion = function () {
+//     //   console.log(this.question);
+//     // };
+//     // this.checkAnswer = function () {
+//     //   console.log("The answer is : ", this.answers[this.correctAnswer]);
+//     // };
+//     // age ye metode xas dashte bashim inja minivisimesh
+//     // vagar na age tekrari bashe vase hame payin minivisim ke ersbari beshe
+//   }
+
+//   // prototype
+
+//   // instance method
+//   showQuestion() {
+//     console.log(this.question);
+//   }
+
+//   checkAnswer() {
+//     console.log("The answer is : ", this.answers[this.correctAnswer]);
+//   }
+
+//   static printSomething() {
+//     console.log("im a static method");
+//   }
+// }
+
+// const quiz1 = new Quiz("question text1", [1, 2, 3, 4], 0);
+// console.log(quiz1);
+// quiz1.checkAnswer();
+
+// Quiz.printSomething();
+
+// inheritance
+
 class Quiz {
   constructor(question, answers, correctAnswer) {
     this.question = question;
     this.answers = answers;
     this.correctAnswer = correctAnswer;
-    // this.showQuestion = function () {
-    //   console.log(this.question);
-    // };
-    // this.checkAnswer = function () {
-    //   console.log("The answer is : ", this.answers[this.correctAnswer]);
-    // };
-    // age ye metode xas dashte bashim inja minivisimesh
-    // vagar na age tekrari bashe vase hame payin minivisim ke ersbari beshe
   }
 
-  // prototype
-
-  // instance method
   showQuestion() {
     console.log(this.question);
   }
@@ -75,14 +103,20 @@ class Quiz {
   checkAnswer() {
     console.log("The answer is : ", this.answers[this.correctAnswer]);
   }
+}
 
-  static printSomething() {
-    console.log("im a static method");
+class Category extends Quiz {
+  constructor(question, answers, correctAnswer, category) {
+    super(question, answers, correctAnswer);
+    this.category = category;
+  }
+
+  showCategory() {
+    console.log("The category is:", this.category);
   }
 }
 
-const quiz1 = new Quiz("question text1", [1, 2, 3, 4], 0);
-console.log(quiz1);
-quiz1.checkAnswer();
-
-Quiz.printSomething();
+const c1 = new Category("question text1", [1, 2, 3, 4], 2, "js");
+console.log(c1);
+c1.checkAnswer();
+c1.showCategory();
