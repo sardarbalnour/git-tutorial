@@ -89,34 +89,59 @@
 
 // inheritance
 
-class Quiz {
-  constructor(question, answers, correctAnswer) {
-    this.question = question;
-    this.answers = answers;
-    this.correctAnswer = correctAnswer;
+// class Quiz {
+//   constructor(question, answers, correctAnswer) {
+//     this.question = question;
+//     this.answers = answers;
+//     this.correctAnswer = correctAnswer;
+//   }
+
+//   showQuestion() {
+//     console.log(this.question);
+//   }
+
+//   checkAnswer() {
+//     console.log("The answer is : ", this.answers[this.correctAnswer]);
+//   }
+// }
+
+// class Category extends Quiz {
+//   constructor(question, answers, correctAnswer, category) {
+//     super(question, answers, correctAnswer);
+//     this.category = category;
+//   }
+
+//   showCategory() {
+//     console.log("The category is:", this.category);
+//   }
+// }
+
+// const c1 = new Category("question text1", [1, 2, 3, 4], 2, "js");
+// console.log(c1);
+// c1.checkAnswer();
+// c1.showCategory();
+
+// abstraction
+// a way of hiding the implementation and showing only the
+// fuctionality to the users
+
+class Animal {
+  constructor() {
+    if (this.constructor === Animal) {
+      throw new Error("Abstract classes can't be instantiated.");
+    }
   }
 
-  showQuestion() {
-    console.log(this.question);
-  }
-
-  checkAnswer() {
-    console.log("The answer is : ", this.answers[this.correctAnswer]);
+  say() {
+    throw new Error("Method 'say()' must be implemented.");
   }
 }
 
-class Category extends Quiz {
-  constructor(question, answers, correctAnswer, category) {
-    super(question, answers, correctAnswer);
-    this.category = category;
-  }
-
-  showCategory() {
-    console.log("The category is:", this.category);
+class Cat extends Animal {
+  say() {
+    console.log("meow");
   }
 }
 
-const c1 = new Category("question text1", [1, 2, 3, 4], 2, "js");
-console.log(c1);
-c1.checkAnswer();
-c1.showCategory();
+const cat1 = new Cat();
+cat1.say();
