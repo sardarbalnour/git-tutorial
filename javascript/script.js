@@ -148,17 +148,20 @@
 
 // Encapsulation
 
-class Quiz {
-  #correctAnswer = 1; //field
+// class Quiz {
+//   #correctAnswer = 1; //field
 
-  checkAnswer() {
-    if (this.#correctAnswer > 2) {
-      console.log("correct");
-    } else {
-      console.log("wrong");
-    }
-  }
-}
+//   checkAnswer() {
+//     if (this.#correctAnswer > 2) {
+//       console.log("correct");
+//     } else {
+//       console.log("wrong");
+//     }
+//   }
+// }
 
-const quiz1 = new Quiz();
-quiz1.checkAnswer();
+// const quiz1 = new Quiz();
+// quiz1.checkAnswer();
+
+// Polymorphism
+
