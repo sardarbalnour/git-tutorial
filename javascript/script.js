@@ -125,23 +125,40 @@
 // a way of hiding the implementation and showing only the
 // fuctionality to the users
 
-class Animal {
-  constructor() {
-    if (this.constructor === Animal) {
-      throw new Error("Abstract classes can't be instantiated.");
+// class Animal {
+//   constructor() {
+//     if (this.constructor === Animal) {
+//       throw new Error("Abstract classes can't be instantiated.");
+//     }
+//   }
+
+//   say() {
+//     throw new Error("Method 'say()' must be implemented.");
+//   }
+// }
+
+// class Cat extends Animal {
+//   say() {
+//     console.log("meow");
+//   }
+// }
+
+// const cat1 = new Cat();
+// cat1.say();
+
+// Encapsulation
+
+class Quiz {
+  #correctAnswer = 1; //field
+
+  checkAnswer() {
+    if (this.#correctAnswer > 2) {
+      console.log("correct");
+    } else {
+      console.log("wrong");
     }
   }
-
-  say() {
-    throw new Error("Method 'say()' must be implemented.");
-  }
 }
 
-class Cat extends Animal {
-  say() {
-    console.log("meow");
-  }
-}
-
-const cat1 = new Cat();
-cat1.say();
+const quiz1 = new Quiz();
+quiz1.checkAnswer();
