@@ -10,7 +10,8 @@
 // const result = regex.test(email);
 // console.log(result);
 
-const str = "Hi; I am Sardar and my phone number is 09055125636";
-const regex = /09\d{9}/;
-const newStr = str.replace(regex, "*********");
-console.log(newStr);
+const str = "Hi; I am Sardar and my phone number is 09055125636 09149447141";
+const regex = /09\d{9}/g;
+// const newStr = str.replace(regex, "*********");
+const result = str.match(regex);
+console.log(result);
