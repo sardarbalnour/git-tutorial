@@ -18,10 +18,14 @@
 //     // always executed
 //   });
 
-const getReq = async () => {
-  const response = await axios.get(
-    "https://jsonplaceholder.typicode.com/todos"
-  );
-  console.log(response);
-};
-getReq();
+// const getReq = async () => {
+//   const response = await axios.get(
+//     "https://jsonplaceholder.typicode.com/todos"
+//   );
+//   console.log(response);
+// };
+// getReq();
+
+
+// security
+// XSS: Cross-site Scripting attacks
